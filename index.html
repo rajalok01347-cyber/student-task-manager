@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="tip-banner"><strong>Daily Tip:</strong> <span id="dailyTip">Loading a tip...</span></header>
+  <main class="app">
+    <h1>Student Task Manager</h1>
+    <form id="taskForm" class="task-form" novalidate>
+      <input id="taskInput" type="text" placeholder="Add new task..." aria-label="New task" aria-describedby="taskHelp formError" autocomplete="off" maxlength="200" required>
+      <button type="submit">Add Task</button>
+    </form>
+    <p id="taskHelp" class="task-help">Use a unique task name, up to 200 characters.</p>
+    <p id="formError" class="error" role="alert"></p>
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="pending" aria-pressed="false">Pending</button>
+      <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+    </div>
+    <ul id="taskList" class="task-list"></ul>
+    <p id="taskCount" class="task-count" role="status"></p>
+    <p id="storageStatus" class="error" role="status"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
